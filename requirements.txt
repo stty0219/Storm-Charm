@@ -1,0 +1,19 @@
+brotlicffi @ file:///C:/Users/task_179300679923899/croot/brotlicffi_1793006883954/work
+certifi @ file:///home/task_179300541075950/croot/certifi_1793006633205/work/certifi
+cffi @ file:///C:/Users/task_178669710197536/croot/cffi_1786697249889/work
+charset-normalizer @ file:///C:/Users/task_cU6cRRWFQl6Bt_0/croot/charset-normalizer_1782917499173/work
+idna @ file:///C:/Users/task_179136521025160/croot/idna_1791365346791/work
+mkl-service @ file:///C:/Users/task_179140496097331/croot/mkl-service_1791405039685/work
+mkl_fft @ file:///C:/Users/task_179249791200006/croot/mkl_fft_1792498018101/work
+mkl_random @ file:///C:/Users/task_179140494281816/croot/mkl_random_1791405094654/work
+numpy @ file:///C:/Users/task_178034591057081/croot/numpy_and_numpy_base_1780346079163/work/dist/numpy-2.4.6-cp311-cp311-win_amd64.whl#sha256=9501c2a46e9ccccb98ecbd21aa6a17a625993614e227c6e4cca63c4166c16876
+packaging==26.3
+pandas @ file:///C:/Users/task_179300583322789/croot/pandas_1793006724076/work
+pycparser @ file:///C:/Users/task_179207252447348/croot/pycparser_1792072674832/work
+PySocks @ file:///C:/Users/task_179002186912327/croot/pysocks_1790022025292/work
+python-dateutil @ file:///C:/b/abs_3au_koqnbs/croot/python-dateutil_1716495777160/work
+requests @ file:///C:/Users/task_179138605114046/croot/requests_1791386639098/work
+six @ file:///C:/b/abs_149wuyuo1o/croot/six_1744271521515/work
+tzdata @ file:///home/task_179274743793848/croot/python-tzdata_1792747493120/work
+urllib3 @ file:///C:/Users/task_179070034242986/croot/urllib3_1790701139334/work
+win_inet_pton @ file:///C:/miniconda3/conda-bld/win_inet_pton_1761746278197/work
