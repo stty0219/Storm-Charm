@@ -17,3 +17,4 @@ six @ file:///C:/b/abs_149wuyuo1o/croot/six_1744271521515/work
 tzdata @ file:///home/task_179274743793848/croot/python-tzdata_1792747493120/work
 urllib3 @ file:///C:/Users/task_179070034242986/croot/urllib3_1790701139334/work
 win_inet_pton @ file:///C:/miniconda3/conda-bld/win_inet_pton_1761746278197/work
+scikit-learn
