@@ -124,7 +124,7 @@
 - 定時取樣（BME280 forced mode），每 1～5 分鐘一筆
 - 環形緩衝區，以開機後相對時間作為時間戳記
 - BLE：低頻廣播；連線後提供「讀即時值」與「批次讀歷史」
-- 開發環境：Zephyr（nRF Connect SDK）或 Arduino
+- 開發環境：採用 **Zephyr（nRF Connect SDK）**，在 Windows 的 WSL2 Ubuntu 中開發，兼作 RTOS 經驗累積；Arduino 為備案（環境設定卡關時，先用它把資料收起來，資料格式不變）
 
 ### 手機端（網頁 App）
 
@@ -271,6 +271,7 @@ python analysis/analyze_station_rain.py data/taipei_466920_hourly_2025.csv --out
 - [ ] 確認採購清單並下單（nRF52840 開發板、BME280 模組、鋰電池、杜邦線或排針；確認 BME280 為 I2C 模組、電池接頭與板子相容）
 - [ ] 定第一版規格：取樣間隔、歷史保存時長、BLE 資料格式（廣播封包與歷史資料欄位）
 - [ ] （選配）評估能否取得更高解析度（例如 10 分鐘）的測站資料，補驗證快速變化
+- [ ] 建立 Zephyr 開發環境（WSL2 Ubuntu），確認能編譯出 XIAO nRF52840 的映像檔；板子名稱、燒錄與序列輸出的做法以 Zephyr 與 Seeed 官方文件為準
 - [ ] 實機驗證：iPhone 上用 Chrome 開 Web Bluetooth 範例頁面（預期不支援），再用支援它的瀏覽器開同一頁，確認能掃描到手邊的 BLE 裝置
 - [ ] 建立網頁 App 骨架：以假資料實作風險分級，演算法寫成可獨立測試的 JavaScript 模組
 
