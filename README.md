@@ -283,7 +283,8 @@ python analysis/analyze_station_rain.py data/taipei_466920_hourly_2025.csv --out
 
 ### 階段 0：準備（不需要硬體）
 
-- [ ] 確認採購清單並下單（nRF52840 開發板、BME280 模組、鋰電池、杜邦線或排針；確認 BME280 為 I2C 模組、電池接頭與板子相容）
+- [x] 確認採購清單並下單（nRF52840 開發板、BME280 模組、杜邦線或排針；確認 BME280 為 I2C 模組、電池接頭與板子相容）
+- [ ] 鋰電池
 - [ ] （選配）評估能否取得更高解析度（例如 10 分鐘）的測站資料，補驗證快速變化
 - [ ] 建立 Zephyr 開發環境（WSL2 Ubuntu），確認能編譯出 XIAO nRF52840 的映像檔；板子名稱、燒錄與序列輸出的做法以 Zephyr 與 Seeed 官方文件為準
 - [ ] 實機驗證：iPhone 上用 Chrome 開 Web Bluetooth 範例頁面（預期不支援），再用支援它的瀏覽器開同一頁，確認能掃描到手邊的 BLE 裝置
