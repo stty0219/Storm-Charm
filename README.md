@@ -137,6 +137,7 @@
 
 - 階段 A 的電腦版不需要手機那樣簡約，以資訊完整為主：裝置電量與電壓、連線與上次同步時間、緩衝區筆數、開機次數與運作時間、韌體版本、即時值、趨勢圖、原始資料表、匯出 CSV
 - 吊飾端要配合提供「裝置狀態」，資料格式規格會分成「每筆取樣資料」與「裝置狀態」兩部分
+- 畫面配置、風險等級顯示規則、趨勢圖與同步警示的草稿見 [`docs/dashboard-draft.md`](docs/dashboard-draft.md)
 
 - HTML + JavaScript + Web Bluetooth，部署於 GitHub Pages
 - 在支援 Web Bluetooth 的 iOS 瀏覽器內開啟，點按連線、批次下載後斷線
@@ -277,16 +278,17 @@ python analysis/analyze_station_rain.py data/taipei_466920_hourly_2025.csv --out
 - [x] 用 2025 臺北站逐時資料完成初步驗證，整理分析腳本（見第 12 節）
 - [x] 依分析結果更新判斷邏輯（濕度與露點差為主軸）
 - [x] 釐清平台限制（沒有 Mac、iOS Safari 無 Web Bluetooth），第一版改採網頁 App（見 4.4）
+- [x] 戰情室畫面草稿：區塊、資料來源、風險等級顯示規則（見 [`docs/dashboard-draft.md`](docs/dashboard-draft.md)）
 - [x] 定第一版資料格式規格草案：取樣間隔 2 分鐘、RAM 約保留 7 天、BLE 服務與同步流程（見 [`docs/data-format-spec.md`](docs/data-format-spec.md)）
 
 ### 階段 0：準備（不需要硬體）
 
-- [x] 確認採購清單並下單（nRF52840 開發板、BME280 模組、鋰電池、杜邦線或排針；確認 BME280 為 I2C 模組、電池接頭與板子相容）
+- [ ] 確認採購清單並下單（nRF52840 開發板、BME280 模組、鋰電池、杜邦線或排針；確認 BME280 為 I2C 模組、電池接頭與板子相容）
 - [ ] 定廣播封包內容：是否帶粗略風險等級、電池百分比
 - [ ] （選配）評估能否取得更高解析度（例如 10 分鐘）的測站資料，補驗證快速變化
 - [ ] 建立 Zephyr 開發環境（WSL2 Ubuntu），確認能編譯出 XIAO nRF52840 的映像檔；板子名稱、燒錄與序列輸出的做法以 Zephyr 與 Seeed 官方文件為準
 - [ ] 實機驗證：iPhone 上用 Chrome 開 Web Bluetooth 範例頁面（預期不支援），再用支援它的瀏覽器開同一頁，確認能掃描到手邊的 BLE 裝置
-- [ ] 建立網頁 App（戰情室）骨架：以假資料實作風險分級，演算法寫成可獨立測試的 JavaScript 模組
+- [ ] 建立網頁 App（戰情室）骨架：依 [`docs/dashboard-draft.md`](docs/dashboard-draft.md) 以假資料實作風險分級，演算法寫成可獨立測試的 JavaScript 模組
 
 ### 階段 1：硬體與韌體（硬體到貨後）
 
