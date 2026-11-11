@@ -126,6 +126,23 @@
 | 電池 | 小型鋰電池（約 150～300 mAh） | 續航需實測 |
 | 外殼 | 小盒或 3D 列印 | 需通風孔，遠離體溫與電池發熱 |
 
+#### 實測紀錄
+
+**XIAO nRF52840**：焊排針前，連按兩下 reset 進入 UF2 bootloader，磁碟內 `INFO_UF2.TXT` 的內容：
+
+```
+UF2 Bootloader 0.6.1 lib/nrfx (v2.0.0) lib/tinyusb (0.10.1-293-gaf8e5a90) lib/uf2 (remotes/origin/configupdate-9-gadbb8c7)
+Model: Seeed XIAO nRF52840
+Board-ID: Seeed_XIAO_nRF52840_Sense
+SoftDevice: S140 version 7.3.0
+Date: Nov 12 2021
+```
+
+- 板子通電、偵測到、能進 bootloader；焊排針後再測一次，仍正常。
+- Arduino IDE 選板 `Seeed XIAO nRF52840, S140 7.3.0` 可編譯並上傳；編譯過程需要 `python` 在 PATH 中。
+
+**BME280**：用 Arduino 做 I2C 掃描，位址 **0x76**，晶片 ID **0x60**（BME280，非 BMP280）。
+
 ### 韌體
 
 - 定時取樣（BME280 forced mode），第一版先以每 2 分鐘一筆試行
