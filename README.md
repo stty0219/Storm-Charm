@@ -139,9 +139,14 @@ Date: Nov 12 2021
 ```
 
 - 板子通電、偵測到、能進 bootloader；焊排針後再測一次，仍正常。
+- `Board-ID` 含 "Sense"，但購買的是一般版（`Model` 欄位不含 Sense），待對照實物與 Seeed 文件確認。
 - Arduino IDE 選板 `Seeed XIAO nRF52840, S140 7.3.0` 可編譯並上傳；編譯過程需要 `python` 在 PATH 中。
 
 **BME280**：用 Arduino 做 I2C 掃描，位址 **0x76**，晶片 ID **0x60**（BME280，非 BMP280）。
+
+- 用 Arduino（Adafruit BME280 函式庫，forced mode）讀出溫度、濕度、氣壓，數值合理。
+- 哈氣測試：溫度約升 2 °C、濕度約升 10 %RH，約 30 秒內逐漸回到原值。
+- 氣壓與 Google 顯示的地區氣壓差約 5 hPa。Google 的值可能是海平面氣壓，待改以氣象署測站氣壓對照。
 
 ### 韌體
 
